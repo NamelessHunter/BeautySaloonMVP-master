@@ -67,5 +67,13 @@ namespace BeautySaloonMVC.Properties
                 resourceCulture = value;
             }
         }
+        internal static System.Drawing.Bitmap picture
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("picture", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

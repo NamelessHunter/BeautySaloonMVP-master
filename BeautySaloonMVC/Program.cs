@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BeautySaloonMVC.Controller;
 using BeautySaloonMVC.View;
 using BeautySaloonMVC.Model;
+using BeautySaloonMVC.Presenter;
 
 
 namespace BeautySaloonMVC
@@ -20,6 +20,10 @@ namespace BeautySaloonMVC
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            var repository = new Model.Repository();
+            var view = new MainView();
+            var presenter = new Presenter.MainPresenter(view, repository);
+            Application.Run(view);
         }
     }
 }

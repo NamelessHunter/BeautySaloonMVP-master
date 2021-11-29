@@ -74,6 +74,18 @@
     <Compile Include="Model\ServicePhoto.cs" />
     <Compile Include="Model\sysdiagrams.cs" />
     <Compile Include="Model\Tag.cs" />
+    <Compile Include="Presenter\AddEditProductPresenter.cs" />
+    <Compile Include="Presenter\MainPresenter.cs" />
+    <Compile Include="Presenter\ProductPresenter.cs" />
+    <Compile Include="View\AddEditProductView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AddEditProductView.Designer.cs">
+      <DependentUpon>AddEditProductView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\IAddEditProductView.cs" />
+    <Compile Include="View\IMainView.cs" />
+    <Compile Include="View\IProductView.cs" />
     <Compile Include="View\MainView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +100,9 @@
     <Compile Include="View\ProductView.Designer.cs">
       <DependentUpon>ProductView.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\AddEditProductView.resx">
+      <DependentUpon>AddEditProductView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\MainView.resx">
       <DependentUpon>MainView.cs</DependentUpon>
     </EmbeddedResource>
@@ -117,11 +132,13 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Presenter\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Test1.jpg" />
+    <Content Include="Resources\picture.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
